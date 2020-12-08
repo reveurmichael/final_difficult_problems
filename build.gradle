@@ -33,6 +33,7 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.13'
+    compile files('core.jar')
 
     // Define ErrorProne
 //    errorprone("com.google.errorprone:error_prone_core:$errorproneVersion")
@@ -41,7 +42,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClassName = 'final_easy.FinalExamEasy'
+    mainClassName = 'final_difficult.FinalExamDifficult'
 }
 
 //tasks.withType(JavaCompile).configureEach {
