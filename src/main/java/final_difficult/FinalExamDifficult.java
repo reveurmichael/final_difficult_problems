@@ -35,8 +35,8 @@ public class FinalExamDifficult extends PApplet {
 
     public void keyPressed() {
         switch (String.valueOf(key).toLowerCase()){
-            case "c":
-                changeHeartColor();
+            case "n":
+                nextColor();
                 break;
             case "w":
                 moveUp();
@@ -50,14 +50,11 @@ public class FinalExamDifficult extends PApplet {
             case "d":
                 moveRight();
                 break;
-            case "u":
-                undo();
-                break;
-            case "x":
-                clear();
+            case "p":
+                previousColor(); // ONLY FOR COLOR.
                 break;
             case "o":
-                setHeartCells();
+                setOriginalHeartCells(); // Original Heart Position and Color
                 break;
             default:
                 break;
@@ -66,32 +63,45 @@ public class FinalExamDifficult extends PApplet {
 
     public void moveUp(){
         // TODO: write your code here.
+        //  You should never use "new Cell()". Therefore, at each position of the cells,
+        //  the cell object won't change and maintains the same reference from the beginning
+        //  to the end of the program. P.S. all Cell objects are instantiated by createCell().
 
     }
 
     public void moveDown(){
         // TODO: write your code here.
+        //  You should never use "new Cell()". Therefore, at each position of the cells,
+        //  the cell object won't change and maintains the same reference from the beginning
+        //  to the end of the program. P.S. all Cell objects are instantiated by createCell().
 
     }
 
     public void moveLeft(){
         // TODO: write your code here.
+        //  You should never use "new Cell()". Therefore, at each position of the cells,
+        //  the cell object won't change and maintains the same reference from the beginning
+        //  to the end of the program. P.S. all Cell objects are instantiated by createCell().
 
     }
 
     public void moveRight(){
         // TODO: write your code here.
+        //  You should never use "new Cell()". Therefore, at each position of the cells,
+        //  the cell object won't change and maintains the same reference from the beginning
+        //  to the end of the program. P.S. all Cell objects are instantiated by createCell().
 
     }
 
-    public void undo(){
+    public void previousColor(){
         // TODO: write your code here.
         //  You could add extra members & function to this class.
-        //  You could also ADDING code to existing functions, such as to: clear(), setHeartCells(), etc..
+        //  You could also ADDING code to existing functions,
+        //  such as to: nextColor(), clear(), setOriginalHeartCells(), etc..
 
     }
 
-    public void changeHeartColor() {
+    public void nextColor() {
         heartColor = new int[]{ (int) random(255), (int)random(255), (int)random(255)};
     }
 
@@ -100,7 +110,7 @@ public class FinalExamDifficult extends PApplet {
         size(widthCell * cols, heightCell * rows);
         createCells();
         clear();
-        setHeartCells();
+        setOriginalHeartCells();
     }
 
     public void draw() {
@@ -112,7 +122,7 @@ public class FinalExamDifficult extends PApplet {
         }
     }
 
-    public void setHeartCells(){
+    public void setOriginalHeartCells(){
         clear();
         heartColor = new int[]{255, 0, 0};
 
