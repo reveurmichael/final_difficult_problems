@@ -3,24 +3,7 @@ package final_difficult;
 import processing.core.PApplet;
 
 
-class Cell {
-    // ATTENTION: Please don't modify anything on the Cell class.
-
-    public float x, y;   // x,y location
-    public float w, h;   // width and height
-
-    public boolean isInHeart = false;
-
-    // Cell Constructor
-    public Cell(float _x, float _y, float _w, float _h) {
-        x = _x;
-        y = _y;
-        w = _w;
-        h = _h;
-    }
-}
-
-public class FinalExamDifficult extends PApplet {
+public class FinalExamDifficultCorrectAnswer extends PApplet {
 
     public Cell[][] cells;
     public int[] heartColor = new int[]{255, 0, 0}; // Initially set to RED
@@ -177,8 +160,8 @@ public class FinalExamDifficult extends PApplet {
 
     public static void main(String[] args) {
         String[] processingArgs = {"LOVE IS JUST A GAME. PLAY IT WELL."};
-        FinalExamDifficult finalExamDifficult = new FinalExamDifficult();
-        PApplet.runSketch(processingArgs, finalExamDifficult);
+        FinalExamDifficultCorrectAnswer finalExamDifficultCorrectAnswer = new FinalExamDifficultCorrectAnswer();
+        PApplet.runSketch(processingArgs, finalExamDifficultCorrectAnswer);
     }
 
 }
