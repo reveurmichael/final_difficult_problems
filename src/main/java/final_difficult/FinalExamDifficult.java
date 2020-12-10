@@ -4,7 +4,7 @@ import processing.core.PApplet;
 
 
 class Cell {
-    // You should not modify the Cell class.
+    // ATTENTION: Please don't modify anything on the Cell class.
 
     public float x, y;   // x,y location
     public float w, h;   // width and height
