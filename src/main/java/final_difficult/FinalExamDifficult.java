@@ -4,6 +4,8 @@ import processing.core.PApplet;
 
 
 class Cell {
+    // You should not modify the Cell class.
+
     public float x, y;   // x,y location
     public float w, h;   // width and height
 
@@ -21,7 +23,7 @@ class Cell {
 public class FinalExamDifficult extends PApplet {
 
     public Cell[][] cells;
-    public int[] heartColor = {255, 0, 0}; // Initially set to RED
+    public int[] heartColor = new int[]{255, 0, 0}; // Initially set to RED
 
     // Number of columns and rows in the grid
     public int cols = 21;
@@ -51,28 +53,41 @@ public class FinalExamDifficult extends PApplet {
             case "u":
                 undo();
                 break;
+            case "x":
+                clear();
+                break;
+            case "o":
+                setHeartCells();
+                break;
             default:
                 break;
         }
     }
 
     public void moveUp(){
+        // TODO: write your code here.
 
     }
 
     public void moveDown(){
+        // TODO: write your code here.
 
     }
 
     public void moveLeft(){
+        // TODO: write your code here.
 
     }
 
     public void moveRight(){
+        // TODO: write your code here.
 
     }
 
     public void undo(){
+        // TODO: write your code here.
+        //  You could add extra members & function to this class.
+        //  You could also ADDING code to existing functions, such as to: clear(), setHeartCells(), etc..
 
     }
 
@@ -98,6 +113,9 @@ public class FinalExamDifficult extends PApplet {
     }
 
     public void setHeartCells(){
+        clear();
+        heartColor = new int[]{255, 0, 0};
+
         final int N = 3;
         final int jOffset = 6;
         final int iOffset = 4;
