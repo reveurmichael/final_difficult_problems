@@ -36,7 +36,7 @@ public class FinalExamDifficult extends PApplet {
     public void keyPressed() {
         switch (String.valueOf(key).toLowerCase()){
             case "n":
-                nextColor();
+                newColor();
                 break;
             case "w":
                 moveUp();
@@ -101,7 +101,7 @@ public class FinalExamDifficult extends PApplet {
 
     }
 
-    public void nextColor() {
+    public void newColor() {
         heartColor = new int[]{ (int) random(255), (int)random(255), (int)random(255)};
     }
 
