@@ -2,68 +2,99 @@ package final_difficult;
 
 import processing.core.PApplet;
 
-public class FinalExamDifficult extends PApplet {
-    // A Cell object
-    class Cell {
-        float x, y;   // x,y location
-        float w, h;   // width and height
 
-        boolean isInHeart = false;
+class Cell {
+    public float x, y;   // x,y location
+    public float w, h;   // width and height
 
-        // Cell Constructor
-        Cell(float _x, float _y, float _w, float _h) {
-            x = _x;
-            y = _y;
-            w = _w;
-            h = _h;
-        }
+    public boolean isInHeart = false;
 
-        void display() {
-            stroke(255);
-            if(isInHeart)
-                fill(heartColor[0], heartColor[1], heartColor[2]); // Cell in RED
-            else
-                fill(200, 200, 200); // Cell in GREY
-            rect(x, y, w, h);
-        }
+    // Cell Constructor
+    public Cell(float _x, float _y, float _w, float _h) {
+        x = _x;
+        y = _y;
+        w = _w;
+        h = _h;
     }
+}
 
-    Cell[][] cells;
-    int[] heartColor = {255, 0, 0}; // Initially set to RED
+public class FinalExamDifficult extends PApplet {
+
+    public Cell[][] cells;
+    public int[] heartColor = {255, 0, 0}; // Initially set to RED
 
     // Number of columns and rows in the grid
-    int cols = 21;
-    int rows = 21;
+    public int cols = 21;
+    public int rows = 21;
 
     // Width and height of each cell in the grid
-    int widthCell = 40;
-    int heightCell = 40;
-
-    public void changeHeartColor() {
-        heartColor = new int[]{ (int) random(255), (int)random(255), (int)random(255)};
-    }
+    public int widthCell = 40;
+    public int heightCell = 40;
 
     public void keyPressed() {
         switch (String.valueOf(key).toLowerCase()){
             case "c":
                 changeHeartColor();
                 break;
+            case "w":
+                moveUp();
+                break;
+            case "s":
+                moveDown();
+                break;
+            case "a":
+                moveLeft();
+                break;
+            case "d":
+                moveRight();
+                break;
+            case "u":
+                undo();
+                break;
             default:
                 break;
         }
     }
 
+    public void moveUp(){
+
+    }
+
+    public void moveDown(){
+
+    }
+
+    public void moveLeft(){
+
+    }
+
+    public void moveRight(){
+
+    }
+
+    public void undo(){
+
+    }
+
+    public void changeHeartColor() {
+        heartColor = new int[]{ (int) random(255), (int)random(255), (int)random(255)};
+    }
+
+
     public void settings() {
         size(widthCell * cols, heightCell * rows);
-        cells = new Cell[cols][rows];
+        createCells();
+        clear();
+        setHeartCells();
+    }
+
+    public void draw() {
+        background(0);
         for (int i = 0; i < cols; i++) {
             for (int j = 0; j < rows; j++) {
-                // Initialize each Cell object
-                cells[i][j] = new Cell(i * widthCell,j * heightCell,
-                        widthCell, heightCell);
+                display(cells[i][j]);
             }
         }
-        setHeartCells();
     }
 
     public void setHeartCells(){
@@ -88,17 +119,36 @@ public class FinalExamDifficult extends PApplet {
         }
     }
 
-    public void draw() {
-        background(0);
+    public void createCells(){
+        cells = new Cell[cols][rows];
         for (int i = 0; i < cols; i++) {
             for (int j = 0; j < rows; j++) {
-                cells[i][j].display();
+                // Initialize each Cell object
+                cells[i][j] = new Cell(i * widthCell,j * heightCell,
+                        widthCell, heightCell);
             }
         }
     }
 
+    public void clear(){
+        for (int i = 0; i < cols; i++) {
+            for (int j = 0; j < rows; j++) {
+                cells[i][j].isInHeart = false;
+            }
+        }
+    }
+
+    public void display(Cell cell){
+        stroke(255);
+        if(cell.isInHeart)
+            fill(heartColor[0], heartColor[1], heartColor[2]); // Cell in RED
+        else
+            fill(200, 200, 200); // Cell in GREY
+        rect(cell.x, cell.y, cell.w, cell.h);
+    }
+
     public static void main(String[] args) {
-        String[] processingArgs = {"FinalExamDifficult"};
+        String[] processingArgs = {"GAME OF LOVE."};
         FinalExamDifficult finalExamDifficult = new FinalExamDifficult();
         PApplet.runSketch(processingArgs, finalExamDifficult);
     }
