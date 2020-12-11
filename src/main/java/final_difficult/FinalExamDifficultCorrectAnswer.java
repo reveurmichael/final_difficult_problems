@@ -15,7 +15,7 @@ public class FinalExamDifficultCorrectAnswer extends PApplet {
     public int widthCell = 40;
     public int heightCell = 40;
 
-    public long countText = -400;
+    public long countText = -4000;
     public String inputText = "Input \"I L U W S A D C\" to play the game.";
 
     public void drawInputText(){

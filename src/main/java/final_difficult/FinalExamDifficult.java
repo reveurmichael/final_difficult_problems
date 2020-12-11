@@ -32,7 +32,7 @@ public class FinalExamDifficult extends PApplet {
     public int widthCell = 40;
     public int heightCell = 40;
 
-    public long countText = -400;
+    public long countText = -4000;
     public String inputText = "Input \"I L U W S A D C\" to play the game.";
 
     public void drawInputText(){
@@ -239,7 +239,7 @@ public class FinalExamDifficult extends PApplet {
     }
 
     public static void main(String[] args) {
-        String[] processingArgs = {"LOVE IS JUST A GAME. PLAY IT WELL."};
+        String[] processingArgs = {"LOVE IS A GAME. NOT AN EXAM."};
         FinalExamDifficult finalExamDifficult = new FinalExamDifficult();
         PApplet.runSketch(processingArgs, finalExamDifficult);
     }
