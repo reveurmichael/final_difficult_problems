@@ -20,7 +20,7 @@ public class DontModifyThisFile {
   private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
   private final PrintStream originalOut = System.out;
 
-  public FinalExamDifficultCorrectAnswer dd = new FinalExamDifficultCorrectAnswer();
+  public FinalExamDifficult dd = new FinalExamDifficult();
   public int ddd = dd.size;
   public Cell[][] dddd = dd.cells;
 
