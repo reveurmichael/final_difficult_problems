@@ -23,6 +23,7 @@ class Cell {
 public class FinalExamDifficult extends PApplet {
 
     // Number of columns and rows in the grid
+    // Please don't modify it.
     public int size = 21;
 
     public Cell[][] cells = new Cell[size][size];
@@ -92,7 +93,7 @@ public class FinalExamDifficult extends PApplet {
 
     public void moveUp(){
         // TODO: write your code here.
-        //  You should never use "new Cell()". Therefore, at each position of the cells,
+        //  You should never use "new Cell()". Therefore, at each position of the cells grid,
         //  the cell object won't change and maintains the same reference from the beginning
         //  to the end of the program.
         //  P.S. all Cell objects have already been instantiated by createCell().
@@ -102,7 +103,7 @@ public class FinalExamDifficult extends PApplet {
 
     public void moveDown(){
         // TODO: write your code here.
-        //  You should never use "new Cell()". Therefore, at each position of the cells,
+        //  You should never use "new Cell()". Therefore, at each position of the cells grid,
         //  the cell object won't change and maintains the same reference from the beginning
         //  to the end of the program.
         //  P.S. all Cell objects have already been instantiated by createCell().
@@ -112,7 +113,7 @@ public class FinalExamDifficult extends PApplet {
 
     public void moveLeft(){
         // TODO: write your code here.
-        //  You should never use "new Cell()". Therefore, at each position of the cells,
+        //  You should never use "new Cell()". Therefore, at each position of the cells grid,
         //  the cell object won't change and maintains the same reference from the beginning
         //  to the end of the program.
         //  P.S. all Cell objects have already been instantiated by createCell().
@@ -122,7 +123,7 @@ public class FinalExamDifficult extends PApplet {
 
     public void moveRight(){
         // TODO: write your code here.
-        //  You should never use "new Cell()". Therefore, at each position of the cells,
+        //  You should never use "new Cell()". Therefore, at each position of the cells grid,
         //  the cell object won't change and maintains the same reference from the beginning
         //  to the end of the program.
         //  P.S. all Cell objects have already been instantiated by createCell().
@@ -144,6 +145,9 @@ public class FinalExamDifficult extends PApplet {
     }
 
     public void draw() {
+        // ATTENTION: Please don't modify anything on the draw() function.
+        // ATTENTION: Please don't modify anything on the draw() function.
+        // ATTENTION: Please don't modify anything on the draw() function.
         background(0);
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
@@ -212,6 +216,9 @@ public class FinalExamDifficult extends PApplet {
     }
 
     public void createCells(){
+        // ATTENTION: Please don't modify anything on the createCells() function.
+        // ATTENTION: Please don't modify anything on the createCells() function.
+        // ATTENTION: Please don't modify anything on the createCells() function.
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 // Initialize each Cell object
